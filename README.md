@@ -20,8 +20,8 @@
 ## 📚 Documentation
 - Cette section décrit comment installer des équilibreur de charge externe devant les nœuds de serveur d'un cluster K3s à haute disponibilité (HA).
 - Ces deux équilibreurs de charge externes seront utilisés pour fournir une adresse d'enregistrement fixe pour l'enregistrement des nœuds ou pour un accès externe au serveur API Kubernetes
-- Docs K3S : https://docs.k3s.io/datastore/cluster-loadbalancer
-- Commande pour lancer l'image docker MANUELLEMENT depuis les VPS / LoadBalancer :
+- Documentation K3s : https://docs.k3s.io/datastore/cluster-loadbalancer
+- Commande pour lancer l'image docker MANUELLEMENT depuis les serveurs physiques :
   ```bash
   sudo docker run -d --restart unless-stopped \
     --name nginx-lb \
