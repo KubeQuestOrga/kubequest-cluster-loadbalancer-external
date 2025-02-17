@@ -11,9 +11,10 @@
 
 
 ## 📚 Load Balancer External
-- IP (principale) : 149.202.48.239
+- IP (principal) : 149.202.48.239
 - IP (secondaire) : 51.178.139.69
-- Domain : cluster-k3s.crzcommon.com
+- Domain principal : crzcommon.com
+- Sous domaine utilisé : cluster-k3s.crzcommon.com
   
 <br /><br />
 
