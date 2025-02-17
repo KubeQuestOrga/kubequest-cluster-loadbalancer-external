@@ -1,0 +1,23 @@
+- hosts: loadbalancer
+  become: yes
+  tasks:
+  - name: Install Docker
+    apt:
+      name: docker.io
+      state: present
+  
+  - name: Copy nginx.conf locally to the remote host
+    copy:
+      src: ../nginx/nginx.conf
+      dest: /home/debian/loadbalancer-docker/nginx.conf
+
+  - name: Run Nginx container
+    docker_container:
+      name: nginx-lb
+      image: nginx:stable
+      restart_policy: unless-stopped
+      published_ports:
+        - "6443:6443"
+      volumes:
+        - /home/debian/loadbalancer-docker/nginx.conf:/etc/nginx/nginx.conf
+      state: started
