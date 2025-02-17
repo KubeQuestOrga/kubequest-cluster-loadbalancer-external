@@ -1,4 +1,4 @@
-# Flapi - Cluster K3s - Load Balancer External
+# KubeQuest - Cluster K3s - Load Balancer External
 
 ## 🛠 Tech Stack
 
@@ -7,7 +7,7 @@
 - **CI/CD (GitHub Actions)**: Automatise le processus de déploiment.
 - **DNS**: AWS Route 53 est utilisé pour gérer les enregistrements DNS et assurer la haute disponibilité du service. Un health check est configuré pour surveiller l’état des adresses IP des deux load balancer. Si la première IP principale devient indisponible, Route 53 redirige automatiquement le trafic vers la seconde IP, garantissant ainsi une continuité de service sans interruption. Cette configuration permet un basculement automatique en cas de défaillance du premier serveur.
 
-<br /><br /><br /><br />
+<br /><br />
 
 
 ## 📚 Load Balancer External
@@ -32,7 +32,7 @@
     nginx:stable
   ```
 
-<br /><br /><br /><br />
+<br /><br />
 
 
 ## 🚀 Production
