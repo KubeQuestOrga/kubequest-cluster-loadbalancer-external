@@ -1,4 +1,4 @@
-# Flapi - Cluster K3s - Load Balancer
+# Flapi - Cluster K3s - Load Balancer External
 
 ## 🛠 Tech Stack
 
