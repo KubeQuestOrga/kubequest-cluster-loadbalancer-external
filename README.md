@@ -3,15 +3,16 @@
 ## 🛠 Tech Stack
 
 - **Nginx**: Utilisé comme proxy inverse pour distribuer le trafic entrant de manière équilibrée entre plusieurs instances de noeud master.
-- **Ansible**: Automatise le déploiement de la configuration Nginx et d'autres tâches administratives sur les serveurs.
+- **Ansible**: Automatise le déploiement de la configuration Nginx et d'autres tâches administratives sur les serveurs (load balancer externes au cluster).
 - **CI/CD (GitHub Actions)**: Automatise le processus de déploiment.
+- **DNS / Route 53 (AWS)**: AWS Route 53 est utilisé pour gérer les enregistrements DNS et assurer la haute disponibilité du service. Un health check est configuré pour surveiller l’état des adresses IP des deux load balancer. Si la première IP principale devient indisponible, Route 53 redirige automatiquement le trafic vers la seconde IP, garantissant ainsi une continuité de service sans interruption. Cette configuration permet un basculement automatique en cas de défaillance du premier serveur.
 
 <br /><br /><br /><br />
 
 
 ## 📚 Load Balancer External
-- IP : 149.202.48.239
-- IP : 51.178.139.69
+- IP (principale) : 149.202.48.239
+- IP (secondaire) : 51.178.139.69
 - Domain : cluster-k3s.crzcommon.com
   
 <br /><br />
